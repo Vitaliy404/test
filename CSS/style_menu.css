@@ -1,0 +1,517 @@
+body{
+    background: linear-gradient(135deg, #0f0f0f 0%, #1b1b1b 50%, #1a2e16 100%);
+}
+
+
+/* Загальний стиль хедера */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header__container {
+    max-width: 1800px; /* збільшили */
+    margin: 0 auto;
+    padding: 0.5rem 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+/* ЛОГО */
+.header__logo {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem; /* було 1.5rem */
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: white;
+}
+
+/* НАВІГАЦІЯ */
+.header__nav {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.7rem 2rem; /* більші відступи */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem; /* було 1rem */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav__list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #b2e861;
+    transition: width 0.3s ease;
+}
+
+.nav__list a:hover {
+    color: #b2e861;
+}
+
+.nav__list a:hover::after {
+    width: 100%;
+}
+
+/* ПРАВА ЧАСТИНА */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.action__icon {
+    font-size: 1.5rem; /* було 1.2rem */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.action__icon:hover {
+    color: #b2e861;
+}
+
+/* --- МОБІЛЬНА АДАПТАЦІЯ --- */
+.header__burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.header__burger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* На малих екранах */
+@media (max-width: 768px) {
+    .nav__list {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        /* bottom: 70px; */
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(20, 20, 20, 0.9);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .nav__list.show {
+        max-height: 400px; /* випадає плавно */
+    }
+
+    .header__burger {
+        display: flex;
+        padding: 0 0 0 5px;
+    }
+
+    .header__nav {
+        background: none;
+        padding: 10px;
+    }
+}
+
+
+/* кнопка бургер меню!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Контейнер меню */
+.menu-wrapper {
+    margin-top: 110px; /* щоб було під твоїм хедером */
+    text-align: center;
+}
+
+/* Кнопка МЕНЮ */
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #b2e861;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: #b2e861;
+    border-color: #b2e861;
+}
+
+/* Іконка бургер */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.burger span {
+    width: 20px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover .burger span {
+    background: #b2e861;
+}
+
+/* Анімація бургер → хрестик */
+.menu-btn.open .burger span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-btn.open .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open .burger span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.menu-btn.open {
+    color: #b2e861;
+    border-color: #b2e861;
+}
+
+/* Випадаючий список */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    overflow: hidden;
+    max-height: 0;           /* схований стан */
+    transition: max-height 0.5s ease;
+}
+
+.dropdown.show {
+    max-height: 500px;       /* розгорнутий стан */
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.dropdown a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #b2e861;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.dropdown a:hover {
+    color: #b2e861;
+}
+
+.dropdown a:hover::after {
+    width: 100%;
+}
+
+/* Адаптація */
+@media (max-width: 600px) {
+    .menu-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .dropdown a {
+        font-size: 16px;
+    }
+}
+
+
+body {
+    margin: 0;
+    color: #fff;
+}
+
+/* Заголовок "Десерти" */
+.section-title {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 0 40px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #b2e861;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px solid #b2e861;
+    margin: 0 20px;
+    position: relative;
+}
+
+.section-title::before {
+    border-image: linear-gradient(to left, transparent, #b2e861) 1;
+}
+
+.section-title::after {
+    border-image: linear-gradient(to right, transparent, #b2e861) 1;
+}
+
+/* Сітка */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* зменшені квадрати */
+    gap: 40px; /* відстань між картками */
+    justify-content: center; /* вирівнювання по центру */
+    padding: 0 40px 70px; /* відступи від країв */
+    max-width: 1200px; /* обмежуємо ширину всієї сітки */
+    margin: 0 auto; /* центрування сітки */
+}
+
+@media (max-width: 992px) {
+    .grid {
+        gap: 50px;
+        padding: 0 50px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        gap: 60px;
+        padding: 0 90px 80px; /* 🔹 більші відступи для мобільних */
+    }
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid #b2e861; */
+    border-radius: 20px 3px;
+    aspect-ratio: 1 / 1; /* квадрат */
+    cursor: pointer;
+}
+
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+}
+
+/* Текстова зона */
+.card-title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 12px 10px 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #b2e861;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    transition: all 0.5s ease, color 0.3s ease;
+    z-index: 2;
+}
+
+/* Опис (спочатку прихований) */
+.card-desc {
+    position: absolute;
+    top: 100%; /* за межами квадрата */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1.4;
+    color: black;
+    text-shadow: 0 0 10px white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Ефекти при наведенні */
+.card:hover img {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: blur(8px);
+
+}
+
+.card:hover .card-title {
+    display: none;
+}
+
+.card:hover .card-desc {
+    top: 0; /* піднімається на своє місце */
+    opacity: 1;
+}
+
+[id]{
+    scroll-margin-top: 80px;
+}
+
+/* Текст-презентація */
+.cafes-intro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.cafes-intro p {
+    font-family: "Lobster", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* Галерея */
+.cafes-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.cafe-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.cafe-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.cafe-card:hover img {
+    transform: scale(1.05);
+}
+
+.cafe-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: #fff;
+}
+
+.cafe-overlay h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #b2e861;
+}
+
+.cafe-overlay p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .cafes-intro p {
+        font-size: 1.1rem;
+    }
+
+    .cafe-overlay h3 {
+        font-size: 1.2rem;
+    }
+
+    .cafe-overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cafes-intro p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .cafe-overlay {
+        padding: 15px;
+    }
+
+    .cafe-overlay h3 {
+        font-size: 1rem;
+    }
+
+    .cafe-overlay p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Для телефонів: завжди 2 колонки */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* примусово 2 */
+        gap: 20px; /* можна зменшити відстань */
+        padding: 0 20px 40px; /* трохи менші відступи */
+    }
+}
