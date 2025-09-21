@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="CSS/style_locations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orelega+One&family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lobster&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orelega+One&family=Pattaya&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <title>Coffeelat</title>
+</head>
+<body>
+    <header id="top" class="header">
+        <div class="header__container">
+    <!-- ЛОГО -->
+            <div class="header__logo">COFFEELAT</div>
+
+    <!-- НАВІГАЦІЯ -->
+        <nav class="header__nav">
+        <ul class="nav__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="index_menu.html">Меню</a></li>
+            <li><a href="index_locations.html">Кавʼярні</a></li>
+            <li><a href="index_app.html">Програма лояльності</a></li>
+            <li><a href="index_contacts.html">Кар'єра</a></li>
+        </ul>
+        </nav>
+
+    <!-- ПРАВА ЧАСТИНА -->
+        <div class="header__actions">
+            <a href="https://www.instagram.com/coffeelat?igsh=MWJlamd5MW4wbnR2ZA==" target="_blank" class="action__icon">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://coffeelat.wayforpay.shop" target="_blank" class="action__icon">
+            <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+
+    <!-- КНОПКА БУРГЕР ДЛЯ МОБІЛКИ -->
+        <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+<section id="cafes" class="cafes-section">
+    <!-- Заголовок і короткий опис -->
+    <div class="cafes-intro">
+        <h2>Наші кавʼярні Coffeelat</h2>
+        <p>Ми завжди поруч – вже 30 кавʼярень у місті, серед яких 3 повноцінні кафе. Обирай найближчу до тебе!</p>
+    </div>
+
+    <!-- Основний контейнер для слайдера -->
+    <div class="cafes-slider">
+        <!-- Ліва частина: фото + адреса + часи роботи -->
+        <div class="cafe-preview">
+            <a href=" https://maps.app.goo.gl/yKkBx1fVdHxN3WXJ7?g_st=ic" target="_blank">
+            <img src="IMG/Галактика.JPG" alt="Кавʼярня Coffeelat">
+            <!-- Інфо тепер поверх фото -->
+                <div class="cafe-info">
+                    <h3>📍 вул. Сверстюка, 6</h3>
+                    <p>Пн-Нд: 08:00 – 22:00</p>
+                </div>
+            </a>
+        </div>
+
+    <!-- Права частина: список кавʼярень -->
+        <div class="cafe-list">
+        <button class="cafe-item active" data-img="IMG/Галактика.JPG" data-address="вул. Сверстюка, 6" data-hours="Пн-Пт: 08:00 – 22:00, Сб-Нд: 09:00 - 22:00" data-map="https://maps.app.goo.gl/yKkBx1fVdHxN3WXJ7?g_st=ic">ЖК Галактика</button>
+        <button class="cafe-item" data-img="IMG/Блокбастер.jpg" data-address="пр. Степана Бандери, 34В" data-hours="Пн-Нд: 10:00 – 21:00" data-map="https://maps.app.goo.gl/wywy7qHtfD8ZWxQD8?g_st=ic">РЦ Блокбастер</button>
+        <button class="cafe-item" data-img="IMG/Лук_янівська.jpg" data-address="вул. Білоруська, 2А" data-hours="Пн-Нд: 10:00 – 21:00" data-map="https://maps.app.goo.gl/5HAWfm2GHHuFh3NBA?g_st=ic">ТЦ Квадрат Лук'янівська</button>
+        <button class="cafe-item" data-img="IMG/Ретровіль.jpg" data-address="пр. Європейського Союзу, 47" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/eNPXsU5u84K1PC4N7?g_st=ic">ТРЦ Retroville</button>
+        <button class="cafe-item" data-img="IMG/location_1.jpg" data-address="Майдан Незалежності, 1" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/uGFqcXz4jdUMYzpN6?g_st=ic">ТЦ Globus</button>
+        <button class="cafe-item" data-img="IMG/паркові.jpg" data-address="вул. Воскресенська, 12В" data-hours="Пн-Пт: 08:00 – 22:00, Сб-Нд: 09:00 - 22:00" data-map="https://maps.app.goo.gl/8etGFSEanVUAdtUr5?g_st=ic">ЖК Паркові Озера</button>
+        <button class="cafe-item" data-img="IMG/Дрім2.jpg" data-address="Оболонський проспект, 21Б" data-hours="Пн-Нд: 10:00 – 21:30" data-map="https://maps.app.goo.gl/d7Q1RQRVPMSB8uFZ6?g_st=ic">ТРЦ Dream berry</button>
+        <button class="cafe-item" data-img="IMG/Дрім1.jpg" data-address="Оболонський проспект, 1Б" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/mTibee1qY1tMwA52A?g_st=ic">ТРЦ Dream yellow</button>
+        <button class="cafe-item" data-img="IMG/СПО2.jpg" data-address="Оболонський проспект, 19" data-hours="Пн-Нд: 08:00 – 22:00" data-map="https://maps.app.goo.gl/eaMLYB8N2mrekyBS7?g_st=ic">ТРЦ Smart Plaza Obolon</button>
+        <button class="cafe-item" data-img="IMG/Скай.jpg" data-address="пр. Романа Шухевича, 2Т" data-hours="Пн-Нд: 10:00 – 21:00" data-map="https://maps.app.goo.gl/4a1radB3fHnMKK7e6?g_st=ic">ТРЦ SkyMall</button>
+        <button class="cafe-item" data-img="IMG/Комод.jpg" data-address="вул. Митрополита Андрія Шептицького, 4А" data-hours="Пн-Нд: 09:00 – 21:00" data-map="https://maps.app.goo.gl/aRHTzkdJhVTdLKY78?g_st=ic">ТРЦ Komod</button>
+        <button class="cafe-item" data-img="IMG/МВЦ.jpg" data-address="вул. Микільсько-Слобідська, 2Б" data-hours="Пн-Нд: 08:00 – 22:00" data-map="https://maps.app.goo.gl/Soborhvp6SPMhtMVA?g_st=ic">МВЦ</button>
+        <button class="cafe-item" data-img="IMG/Аладін.jpg" data-address="вул. Михайла Гришко, 3А" data-hours="Пн-Нд: 08:00 – 22:00" data-map="https://maps.app.goo.gl/CP4GDuwZqQ1vmQhx6?g_st=ic">ТРЦ Aladdin</button>
+        <button class="cafe-item" data-img="IMG/Район2.jpg" data-address="вул. Миколи Лаврухіна, 4" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/X5wkw7y9nxYHn2SRA?g_st=ic">ТРЦ РайON</button>
+        <button class="cafe-item" data-img="IMG/Проспект.jpg" data-address="вул. Гната Хоткевича, 1В" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/8tPuMXFdngUheECq6?g_st=ic">ТРК Проспект</button>
+        <button class="cafe-item" data-img="IMG/КвадратНЕО.jpg" data-address="пр. Воскресенський, 36" data-hours="Пн-Нд: 09:00 – 22:00" data-map="https://maps.app.goo.gl/pRFhoWj8ebyWCmAL7?g_st=ic">ТРЦ Квадрат NEO</button>
+        <button class="cafe-item" data-img="IMG/Метроград.jpg" data-address="ТЦ Метроград, з боку вулиці Велика Васильківська" data-hours="Пн-Нд: 10:00 – 21:00" data-map="https://maps.app.goo.gl/icMeW4shqu4QfHfq9?g_st=ic">ТЦ Метроград</button>
+        <button class="cafe-item" data-img="IMG/ЛАвіна.jpg" data-address="вул. Берковецька, 6Д" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/3sacKKzsCGXnqNuy7?g_st=ic">ТРЦ Lavina Mall</button>
+        <button class="cafe-item" data-img="IMG/Вербицького.jpg" data-address="вул. Архітектора Вербицького, 30А" data-hours="Пн-Нд: 08:00 – 21:00" data-map="https://maps.app.goo.gl/mUdhe5UhE75D73K29?g_st=ic">Вербицького, 30А</button>
+        <button class="cafe-item" data-img="IMG/ОК1.jpg" data-address="вул. Антоновича, 176" data-hours="Пн-Нд: 08:30 – 22:00" data-map="https://maps.app.goo.gl/G1qbLqb1Bz6x6zwAA?g_st=ic">ТРЦ Ocean Plaza (-1 поверх)</button>
+        <button class="cafe-item" data-img="IMG/ОК2.jpg" data-address="вул. Антоновича, 176" data-hours="Пн-Нд: 09:00 – 22:00" data-map="https://maps.app.goo.gl/G1qbLqb1Bz6x6zwAA?g_st=ic">ТРЦ Ocean Plaza (1 поверх)</button>
+        <button class="cafe-item" data-img="IMG/Піраміда2.jpg" data-address="вул. Олександра Мішуги, 4" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/G1qbLqb1Bz6x6zwAA?g_st=ic">ТЦ Піраміда (1 поверх)</button>
+        <button class="cafe-item" data-img="IMG/Піраміда1.webp" data-address="вул. Олександра Мішуги, 4" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/G1qbLqb1Bz6x6zwAA?g_st=ic">ТЦ Піраміда (2 поверх)</button>
+        <button class="cafe-item" data-img="IMG/блокбастер.jpg" data-address="пр. Степана Бандери, 36" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/YFitViYUJEUg9jMn6?g_st=ic">ТРЦ Blockbuster Mall</button>
+        <button class="cafe-item" data-img="IMG/РівГош.jpg" data-address="вул. Здолбунівська, 17" data-hours="Пн-Нд: 08:00 – 22:00" data-map="https://maps.app.goo.gl/qXv5DecxQJ7hfva77?g_st=ic">ТРЦ Rive Gauche</button>
+        <button class="cafe-item" data-img="IMG/аркадія.jpg" data-address="Дніпровська набережна, 33" data-hours="Пн-Нд: 08:00 – 22:00" data-map="https://maps.app.goo.gl/hf8ZXrP1xF87hXgq8?g_st=ic">ТК Аркадія</button>
+        <button class="cafe-item" data-img="IMG/атмосфера.jpg" data-address="Столичне шосе, 103" data-hours="Пн-Пт: 08:00 – 20:00, Сб-Нд: 09:00 - 20:00" data-map="https://maps.app.goo.gl/Fe9oU5EoFWbMtPvd7?g_st=ic">ТРЦ Атмосфера</button>
+        <button class="cafe-item" data-img="IMG/КПІ1.jpg" data-address="пр. Перемоги, 24" data-hours="Пн-Нд: 09:00 – 22:00" data-map="https://maps.app.goo.gl/LxV52v7x53r4EeSf6?g_st=ic">ТРЦ Smart Plaza Polytech</button>
+        <button class="cafe-item" data-img="IMG/КвадратБорщагівка.jpg" data-address="вул. Гната Юри, 20" data-hours="Пн-Нд: 10:00 – 20:45" data-map="https://maps.app.goo.gl/mcuh2meMZ1AN9Q1m6?g_st=ic">ТЦ Квадрат Борщагівка</button>
+        <button class="cafe-item" data-img="IMG/КПІ2.jpg" data-address="пр. Перемоги, 24" data-hours="Пн-Нд: 10:00 – 22:00" data-map="https://maps.app.goo.gl/LxV52v7x53r4EeSf6?g_st=ic">ТРЦ Smart Plaza Polytech</button>
+        <!-- ... решта кавʼярень -->
+        </div>
+    </div>
+</section>
+
+<!-- ___________________Кав'ярні формату КАФЕ_______________ -->
+    <h2 id="kitchen" class="section-title">Кавʼярні формату "Кафе"</h2>
+
+<section class="cafes-intro">
+    <div class="intro-text">
+        <p>
+            Ми створили три унікальні кав’ярні у форматі кафе, де поєднується
+            ароматна кава та повноцінна кухня. Тут можна не лише випити улюблений
+            напій, а й смачно поїсти, насолодившись затишною атмосферою.
+        </p>
+    </div>
+</section>
+
+<section class="cafes-gallery">
+    <a href="https://coffeelat-parkovi-ozera.choiceqr.com/?fbclid=PAVERFWAM2Z_tleHRuA2FlbQIxMAABp5XFiimDoQKkTkcMISvQNBIE3pw_Ah_HfF2jvHiwPpv6sFZX0ydLdqOW2EK9_aem_4aX_R6cC7LQ6ZmlQ9UPyFA" 
+    target="_blank" class="cafe-card">
+        <img src="IMG/parkovi.PNG" alt="Coffeelat Паркові Озера">
+        <div class="cafe-overlay">
+            <h3>Coffeelat Паркові Озера</h3>
+            <p>Вул. Воскресенська, 12В</p>
+        </div>
+    </a>
+
+    <a href="https://coffeelat.choiceqr.com/?fbclid=PAVERFWAM2aDZleHRuA2FlbQIxMAABp9GU8dPns7Woyw3myScZYTCLqRqlgBaWT4RNerjj509_08bmXaDv7uDrj11z_aem_yK4pIlaENF4lM3TQNztcaw#interval=2&cycle=0" 
+    target="_blank" class="cafe-card">
+        <img src="IMG/mvz.PNG" alt="Coffeelat МВЦ">
+        <div class="cafe-overlay">
+            <h3>Coffeelat МВЦ</h3>
+            <p>Вул. Микільсько-Слобідська, 2Б</p>
+        </div>
+    </a>
+
+    <a href="https://atmosfera-coffeelat.choiceqr.com/?fbclid=PAVERFWAM2Z25leHRuA2FlbQIxMQABp1MS47yOkZVPQljKEC-ARxMV6LSFj8XlA3DOk-yFRu39Qd06tvAD2o4iMVxL_aem_nOaNTbd0wJSrl0q_K-8-tg" 
+    target="_blank" class="cafe-card">
+        <img src="IMG/atmosfera.PNG" alt="Coffeelat Atmosfera">
+        <div class="cafe-overlay">
+            <h3>Coffeelat Atmosfera</h3>
+            <p>Столичне шосе, 103</p>
+        </div>
+    </a>
+</section>
+
+<script>
+const cafeItems = document.querySelectorAll(".cafe-item");
+const cafePreview = document.querySelector(".cafe-preview img");
+const cafeLink = document.querySelector(".cafe-preview a");
+const cafeAddress = document.querySelector(".cafe-info h3");
+const cafeHours = document.querySelector(".cafe-info p");
+
+cafeItems.forEach(item => {
+    item.addEventListener("click", () => {
+    cafeItems.forEach(btn => btn.classList.remove("active"));
+    item.classList.add("active");
+
+    cafePreview.src = item.dataset.img;
+    cafeAddress.textContent = "📍 " + item.dataset.address;
+    cafeHours.textContent = item.dataset.hours;
+    cafeLink.href = item.dataset.map;
+    });
+});
+</script>
+
+<script>
+    const burger = document.querySelector('.header__burger');
+    const navList = document.querySelector('.nav__list');
+
+    burger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+    });
+</script>
+</body>
+</html>
